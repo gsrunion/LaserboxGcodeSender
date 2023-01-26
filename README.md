@@ -23,10 +23,16 @@ The gcode support in XCS is actually a pretty thin shim of functionality. It ing
     
 4. Insertion of spaces around in between between gcode parameters
     - Reasoning: Unknown, but gcode it easier to parse when spaces are present
+
+5. More to be discovered
     
  
 ### Gcode Transformation Example: Transformed on the left, input from LightBurn on the right
 ![transformed gcode](https://user-images.githubusercontent.com/1959884/214913335-6fd0ba51-f6ad-4014-8d45-78c4166a67ac.png)
+
+## Project Goals
+1. To provide an alternate solution to XCS's transform and send functionality
+2. To provide a platform for which the limitations of the XCS solution can be addressed.
 
 
 
