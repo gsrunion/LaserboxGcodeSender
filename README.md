@@ -45,4 +45,22 @@ The gcode support in XCS is actually a pretty thin shim of functionality. It ing
     - Utilize GitHub as a bug tracking platform vesus some absurd User Experience Map Google document.
 
 
+### Project Structure
+The project will consist of a series of folders and couple of simple daemons that monitor these folders transforming and moving the files between them.
 
+Folders:
+1. Input folder: the folder on the system for which users will save gcode exported from lightburn
+2. Ouput folder: a folder that will house transformed gcode up until the point in which it is uploaded to the LaserBox
+3. Archive folder: Contains copies of all files saved to the input folder and uploaded to the LaserBox with the copies names such that they are easily matched up for debug.
+
+Deamons:
+A. Input Deamon
+    - Duties:
+        - Monitor the input folder for file additions
+        - Uniquely rename and save a copy of the file to the archive and output folders
+B. Output Deamon
+    - Duties:
+        - Monitor the output folder for file additions
+        - Peform gcode transformation on file
+        - Uniquely rename transformed file and save a copy of the file to the archive
+        - Upload transformed file to the Laserbox
