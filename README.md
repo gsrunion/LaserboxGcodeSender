@@ -32,7 +32,10 @@ The gcode support in XCS is actually a pretty thin shim of functionality. It ing
 
 ## Project Goals
 1. To provide an alternate solution to XCS's transform and send functionality
-2. To provide a platform for which the limitations of the XCS solution can be addressed.
+2. To provide a platform for which the limitations of the XCS solution can be addressed. Future goals include
+    - Integration with relatively cheap 3rd party cameras that are compatible with LightBurn allowing work placement via camera
+    - Rotary support
+    - Finish what my defunct [LightBurnGrblBridge](https://github.com/gsrunion/LaserBoxGrblBridge) project to create a fully function facade layer that make the LaserBox appear as a run of the mill GRBL machine.
 
 
 
