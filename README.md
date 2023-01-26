@@ -54,12 +54,12 @@ Folders:
 3. Archive folder: Contains copies of all files saved to the input folder and uploaded to the LaserBox with the copies names such that they are easily matched up for debug.
 
 Deamons:
-A. Input Deamon
-    - Duties:
+1. Input Deamon
+    - Duties
         - Monitor the input folder for file additions
         - Uniquely rename and save a copy of the file to the archive and output folders
-B. Output Deamon
-    - Duties:
+2. Output Deamon
+    - Duties
         - Monitor the output folder for file additions
         - Peform gcode transformation on file
         - Uniquely rename transformed file and save a copy of the file to the archive
