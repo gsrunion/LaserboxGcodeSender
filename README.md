@@ -32,10 +32,17 @@ The gcode support in XCS is actually a pretty thin shim of functionality. It ing
 
 ## Project Goals
 1. To provide an alternate solution to XCS's transform and send functionality
-2. To provide a platform for which the limitations of the XCS solution can be addressed. Future goals include
+2. Provide a workflow with less steps than XCS to upload gcode to the machine. The expected user workflow is 
+    - Save source gcode file to designated location on file system
+    - Press button on LaserBox to start the job
+3. To provide a platform for which the limitations of the XCS solution can be addressed. Future goals include
     - Integration with relatively cheap 3rd party cameras that are compatible with LightBurn allowing work placement via camera
     - Rotary support
     - Finish what my defunct [LightBurnGrblBridge](https://github.com/gsrunion/LaserBoxGrblBridge) project to create a fully function facade layer that make the LaserBox appear as a run of the mill GRBL machine.
+4. To bake in support for data collection to allow for easier debug of user issues. That is too
+    - Provide copious logging
+    - Capture timestamped copies both provided and transformed gcode files and archive.
+    - Utilize GitHub as a bug tracking platform vesus some absurd User Experience Map Google document.
 
 
 
