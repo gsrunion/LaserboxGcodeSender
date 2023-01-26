@@ -50,17 +50,22 @@ The project will consist of a series of folders and couple of simple daemons tha
 
 Folders:
 1. Input folder: the folder on the system for which users will save gcode exported from lightburn
-2. Ouput folder: a folder that will house transformed gcode up until the point in which it is uploaded to the LaserBox
-3. Archive folder: Contains copies of all files saved to the input folder and uploaded to the LaserBox with the copies names such that they are easily matched up for debug.
+2. Processing folder: the folder that will temporarily hold renamed input files and transformed files
+3. Ouput folder: a folder that will house transformed gcode up until the point in which it is uploaded to the LaserBox
+4. Archive folder: Contains copies of all files saved to the input folder and uploaded to the LaserBox with the copies names such that they are easily matched up for debug.
 
 Deamons:
 1. Input Deamon
     - Duties
         - Monitor the input folder for file additions
-        - Uniquely rename and save a copy of the file to the archive and output folders
-2. Output Deamon
+        - Uniquely rename and save a copy of the file to the processing folder
+2. Processing Deamon:
+    - Duties
+        - Monitor processing folder for file additions
+        - Create transformed copy of the input file
+        - save a copy of the input and transformed file to the archive
+3. Output Deamon
     - Duties
         - Monitor the output folder for file additions
-        - Peform gcode transformation on file
-        - Uniquely rename transformed file and save a copy of the file to the archive
         - Upload transformed file to the Laserbox
+        - Delete file after upload
