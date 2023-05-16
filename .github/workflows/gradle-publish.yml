@@ -40,7 +40,7 @@ jobs:
         gradle-version: 7.6.1
         
     - name: List Build Artifacts
-      run: ls build/libs/github-actions-template-*.jar
+      run: ls build/libs/*.jar
 
     - name: create tag
       uses: rickstaa/action-create-tag@v1
