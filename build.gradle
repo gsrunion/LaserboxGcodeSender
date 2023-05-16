@@ -6,7 +6,7 @@ plugins {
 
 def major_version='0'
 def minor_version='0'
-def micro_version=2
+def micro_version=4
 
 group = 'com.runion'
 sourceCompatibility = '17'
