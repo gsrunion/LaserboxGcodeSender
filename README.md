@@ -44,3 +44,22 @@ Folders:
 2. Processed folder: the folder that will hold files after having been transformed to gcode compatible with the Laserbox
 3. Uploaded folder: Contains copies of files that have been uploaded to the machine.
 
+### Installation
+The program is written and Java and requires Java version 17 to be installed on your computer..
+
+1. Download and install the appropriate java distribution ![for your platform](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
+2. Download the latest released ![jar file](https://github.com/gsrunion/LaserboxGcodeSender/releases)
+3. Open a terminal, navigate to the directory where you downloaded the jar, and run the following command `java -jar .\LaserboxGcodeSender-0.0.X.jar' (use a forward slash on OSX or Linux). I will be adding directions in the near future on how to avoid using the command line to launch.
+
+### Usage
+1. Click 'Start Monitoring'
+2. Select a folder where you wish to save gcode files output from LightBurn.
+3. Follow the ![xtool provided instructions](https://community.xtool.com/#/making/detail/tips/662) for generating gcode (semi) compatible with the Laserbox from LightBurn
+4. Save the generated gcode to your previously selected folder. Observe machine beep in response to having been sent the file.
+5. Press the button on the machine as you normally would to start a cut.
+
+*NOTE* the usb connection to the machine has to be alive and well for the application to send the file over. Historically the usb connection to the machine has been flakey. However, I plan on adding directions on how to look confirm, by way or your OS, that the machine is alive and well as well as adding indications of machine connectivity inside the application.
+
+
+
+
