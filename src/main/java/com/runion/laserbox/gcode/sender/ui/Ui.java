@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import javax.swing.*;
 
-@Component
+//@Component
 class Ui extends JFrame {
     public Ui(TopPanel topPanel, LowerPanel lowerPanel) {
         setTitle("Laserbox Gcode Sender");
